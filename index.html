@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>API Documentation</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    h1, h2 { color: #333; }
+    pre { background: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    code { background: #eee; padding: 2px 4px; }
+  </style>
+</head>
+<body>
+  <h1>API Documentation</h1>
+  <p>This API allows CRUD operations for movies, series, and songs stored dynamically in a JSON file.</p>
+  
+  <h2>Endpoints</h2>
+  <ul>
+    <li><strong>GET /movies</strong>: Retrieve movies.</li>
+    <li><strong>POST /movies</strong>: Add a movie (JSON format).</li>
+    <li><strong>PUT /movies</strong>: Update the first movie.</li>
+    <li><strong>DELETE /movies</strong>: Delete the first movie.</li>
+  </ul>
+
+  <h2>Example Usage</h2>
+  <pre>
+curl -X POST http://localhost:3000/movies \
+     -H "Content-Type: application/json" \
+     -d '{"title": "Inception", "year": 2010}'
+  </pre>
+</body>
+</html>
